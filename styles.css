@@ -1,0 +1,77 @@
+/* Basic styles for responsiveness and centering with vintage hacker theme */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: #00FF00; /* Hacker green */
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+}
+
+.container {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px; /* Add some padding */
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+pre {
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the ASCII art */
+}
+
+/* Style for the go back button */
+.go-back {
+    display: block;
+    color: #00FF00;
+    text-decoration: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.go-back:hover {
+    text-decoration: underline;
+}
+
+/* Rectangular Button Styling */
+.button {
+    background-color: black;
+    color: #4AFF00; /* Brighter green for buttons */
+    border: 1px solid #4AFF00;
+    padding: 10px 20px; /* Adjust padding for rectangular shape */
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Match the previous font size */
+    margin-top: 20px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+.button:hover {
+    background-color: #4AFF00;
+    color: black;
+    border-color: #4AFF00;
+    transform: scale(1.05); /* Scale up slightly on hover */
+    box-shadow: 0 0 10px #4AFF00; /* Add a glow effect on hover */
+}
+
+/* Ensure .go-back and .button styles are consistent if needed */
+.go-back, .button {
+    color: #00FF00;
+}
+
+.go-back:hover, .button:hover {
+    color: black;
+}

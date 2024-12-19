@@ -4,45 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Modifications List - Hacker Style</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Hack:wght@400;700&display=swap');
-
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: #00FF00; /* Hacker green */
-            font-family: 'Hack', monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 14px; /* Adjust this value for text size */
-        }
-        .container {
-            text-align: left;
-            width: 100%;
-            max-width: 600px;
-        }
-        .home-button {
-            background-color: black;
-            border: 1px solid #00FF00;
-            color: #00FF00;
-            padding: 5px 10px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px auto; /* Center the button horizontally */
-            display: block; /* Make it a block to center with margin: auto */
-        }
-        .home-button:hover {
-            background-color: #00FF00;
-            color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <div class="container" id="markdown-content">
-    <a href="/index.html" class="home-button">Home</a>
+    <a href="/index.html" class="button">Home</a>
 
     <!-- Leave this empty; it will be filled by JavaScript -->
 </div>
@@ -82,7 +48,7 @@ vsync on high framerates`;
 
         var markdownContent = document.getElementById('markdown-content');
         if (markdownContent) {
-            markdownContent.innerHTML = marked.parse(markdownText) + '<br><a href="/index.html" class="home-button">Home</a>';
+            markdownContent.innerHTML = marked.parse(markdownText) + '<br><a href="/index.html" class="button">Home</a>';
         }
     });
 </script>
