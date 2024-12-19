@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Modifications List - Hacker Style</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hack:wght@400;700&display=swap');
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #00FF00; /* Hacker green */
+            font-family: 'Hack', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px; /* Adjust this value for text size */
+        }
+        .container {
+            text-align: left;
+            width: 100%;
+            max-width: 600px;
+        }
+        .home-button {
+            background-color: black;
+            border: 1px solid #00FF00;
+            color: #00FF00;
+            padding: 5px 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px auto; /* Center the button horizontally */
+            display: block; /* Make it a block to center with margin: auto */
+        }
+        .home-button:hover {
+            background-color: #00FF00;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="markdown-content">
+    <a href="/index.html" class="home-button">Home</a>
+
+    <!-- Leave this empty; it will be filled by JavaScript -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var markdownText = `# Game Modifications
+
+### Bullet Points
+
+- page flip crap
+- stretch console
+- faster swimming speed
+- damage direction protocol
+- armor color flash
+- gib death
+- grenade tweaking
+- brightened alias models
+- nail gun lag
+- dedicated server quit at game end
+
+### Numbered List
+
+1. scoreboard
+2. optional full size
+3. view centering key
+4. vid mode 15 crap
+5. change ammo box on sbar
+6. allow "restart" after a program error
+7. respawn blood trail?
+8. -1 ammo value on rockets
+9. light up characters
+
+### Additional Notes
+
+vsync on high framerates`;
+
+        var markdownContent = document.getElementById('markdown-content');
+        if (markdownContent) {
+            markdownContent.innerHTML = marked.parse(markdownText) + '<br><a href="/index.html" class="home-button">Home</a>';
+        }
+    });
+</script>
+</body>
+</html>
