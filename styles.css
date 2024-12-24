@@ -18,6 +18,7 @@ body, html {
     width: 100%;
     max-width: 600px;
     padding: 20px; /* Add some padding */
+    box-sizing: border-box;
 }
 
 ul, ol {
@@ -58,6 +59,7 @@ pre {
     font-size: 14px; /* Match the previous font size */
     margin-top: 20px;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
+    width: auto;
 }
 .button:hover {
     background-color: #4AFF00;
@@ -79,4 +81,24 @@ pre {
 /* Custom color for visited links */
 a:visited {
     color: #e6ff00; /* Match the button color for consistency */
+}
+
+pre, code {
+    overflow-wrap: break-word;
+    white-space: pre-wrap; /* Allows line breaks within words */
+}
+
+@media only screen and (max-width: 480px) {
+    .container {
+        max-width: 100%; /* Full width on small screens */
+    }
+    pre {
+        font-size: 10px; /* Reduce font size for better fit */
+    }
+    .button {
+        width: 100%; /* Make buttons full width */
+    }
+    body, html {
+        align-items: flex-start; /* Align to top on small screens */
+    }
 }
