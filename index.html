@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Terminal Blog</title>
+    <title>My retro blog</title>
     <link rel="stylesheet" href="/styles.css">
     <style>
+        /* ASCII Art style */
         .ascii-art {
             text-align: center;
             font-family: monospace;
@@ -20,23 +21,40 @@
             line-height: 1;
         }
 
+        /* Container for main content */
         .container {
             position: relative;
         }
 
+        /* Heading style */
         h1 {
             margin-top: 0;
             text-align: center;
         }
 
+        /* Content area styling */
         .content {
             text-align: center;
+        }
+
+        /* Divider line style */
+        .divider {
+            width: 100%;
+            height: 2px;
+            background-color: #4AFF00;
+            margin: 20px 0;
+        }
+
+        /* Markdown content styling */
+        .markdown-content {
+            text-align: left;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <pre class="ascii-art">
+    <!-- ASCII art for the header -->
+    <pre class="ascii-art" translate="no">
  ██╗  ██╗███████╗██╗     ██╗      ██████╗
  ██║  ██║██╔════╝██║     ██║     ██╔═══██╗
  ███████║█████╗  ██║     ██║     ██║   ██║
@@ -44,19 +62,41 @@
  ██║  ██║███████╗███████╗███████╗╚██████╔╝
  ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝
     </pre>
-    <h1>Welcome to my game devlogs archive</h1>
     <div class="content">
-        <p>Here you will find all the info from the development of my game Spaceman Memories.
-            If you want to wishlist or follow the game on social media find more info at
-            <a href="http://www.nerdypunk.dev">www.nerdypunk.dev</a>.
-            This work is inspired by the .plan files by John Carmack which he posted in the early ID Software days.
-            I hope to use this as an accountability system for my game development endeavors. If you want
-            to make your own archive just fork <a href="https://github.com/nerdypunk/nerdypunk.github.io">this repo on Github</a>.
-        </p>
-        <a href="/plan text files/sampleplan.html" class="button">View Sample Plan</a>
-        <a href="December2024.html" class="button">December 2024 archive</a><br>
-
+        <div id="markdown-content-en" class="markdown-content"></div>
+        <!-- Divider -->
+        <div class="divider"></div>
+        <div id="markdown-content-ja" class="markdown-content" lang="ja"></div>
+        <!--⚠️ Button Links to other pages, edit these to link to your own folders ⚠️-->
+        <a href="/sampleplan.html" class="button">View Sample Plan</a>
+        <a href="Per%20Month%20Archive/December2024.html" class="button">December 2024 archive</a><br>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    <!-- ⚠️Edit this next section to change to your own welcome text⚠️-->
+    document.addEventListener('DOMContentLoaded', function() {
+        var markdownTextEn = `# Welcome to my game dev archive
+
+This is my game development archive for **Spaceman Memories** and other projects.
+If you'd like to wishlist the game or follow its progress on social media, visit
+[www.nerdypunk.dev](http://www.nerdypunk.dev).
+This archive is inspired by the .plan files by John Carmack, shared during the early days of id Software.
+I'm using it as an accountability system to document my game development journey.
+Want to create your own archive? Fork [this GitHub repository](https://github.com/nerdypunk/nerdypunk.github.io).`;
+
+        var markdownTextJa = `# ゲーム開発アーカイブへようこそ
+
+ここでは、私のゲーム「スペースマン・メモリーズ」の開発に関するすべての情報をご覧いただけます。
+ゲームのウィッシュリストへの登録やソーシャルメディアでのフォローをご希望の方は
+[www.nerdypunk.dev](http://www.nerdypunk.dev)をご覧ください。
+この取り組みは、ジョン・カーマックが初期のIDソフトウェア時代に投稿していた.planファイルにインスピレーションを受けています。
+これを私のゲーム開発の取り組みに対する責任システムとして活用したいと考えています。
+あなた自身のアーカイブを作りたい場合は、[GitHubのこのレポジトリ](https://github.com/nerdypunk/nerdypunk.github.io)をフォークしてください。`;
+
+        document.getElementById('markdown-content-en').innerHTML = marked.parse(markdownTextEn);
+        document.getElementById('markdown-content-ja').innerHTML = marked.parse(markdownTextJa);
+    });
+</script>
 </body>
 </html>

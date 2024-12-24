@@ -75,3 +75,8 @@ pre {
 .go-back:hover, .button:hover {
     color: black;
 }
+
+/* Custom color for visited links */
+a:visited {
+    color: #e6ff00; /* Match the button color for consistency */
+}

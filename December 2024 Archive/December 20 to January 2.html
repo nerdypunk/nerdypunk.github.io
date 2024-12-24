@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Modifications List - Hacker Style</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container" id="markdown-content">
+    <a href="/index.html" class="button">Home</a>
+
+    <!-- Leave this empty; it will be filled by JavaScript -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<!-- ⚠️Edit this next section to change to the content of the entry⚠️-->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var markdownText = `# Holiday break to study UE5
+
+### What I'm currently studying
+(Not working on Spaceman Memories until January)
+
+- Watching "The Unreal Fellowship"
+    https://dev.epicgames.com/community/learning/talks-and-demos/W4va/unreal-engine-unreal-fellowship-games
+
+This is a very exclusive and invite onlyfellowship directed towards game dev professionals in which Epic
+teaches in depth stuff stuff about Unreal Engine. It is free and open for a limited time until January 15,
+so that's why I'm currently taking a break from the game to watch it.
+
+### 現在勉強中のこと
+(Spaceman Memoriesの作業は1月まで休止中)
+
+- 「The Unreal Fellowship」を視聴中
+    https://dev.epicgames.com/community/learning/talks-and-demos/W4va/unreal-engine-unreal-fellowship-games
+
+これは、ゲーム開発のプロフェッショナルを対象とした非常に限定された招待制のフェローシップで、EpicがUnreal Engineについて深く教えるものです。1月15日まで限定で無料公開されているため、現在ゲームの作業を休止してこれを視聴しています。`;
+
+        var markdownContent = document.getElementById('markdown-content');
+        if (markdownContent) {
+            markdownContent.innerHTML = marked.parse(markdownText) + '<br><a href="/index.html" class="button">Home</a>';
+        }
+    });
+</script>
+</body>
+</html>
